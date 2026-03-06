@@ -1,0 +1,67 @@
+---
+const offlineSteps = [
+  { step: '1', title: 'Datang ke Butik', desc: 'Kunjungi Rumah Jahit Arkadara di Cisauk.' },
+  { step: '2', title: 'Ukur & Pilih Bahan', desc: 'Pengukuran langsung dan pemilihan material.' },
+  { step: '3', title: 'Fitting & Ambil', desc: 'Pengepasan busana sebelum dibawa pulang.' },
+];
+
+const onlineSteps = [
+  { step: '1', title: 'Konsultasi via WA', desc: 'Diskusikan model dan kirim foto referensi.' },
+  { step: '2', title: 'Ukur & Kirim Bahan', desc: 'Kirim baju contoh atau ukur mandiri.' },
+  { step: '3', title: 'Kirim ke Alamat', desc: 'Hasil jahitan dikirim langsung ke rumah Anda.' },
+];
+---
+<section id="process" class="py-24 bg-arkadara-100/30">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-sm font-bold tracking-widest text-arkadara-500 uppercase mb-3">Cara Pemesanan</h2>
+      <p class="text-3xl sm:text-4xl font-serif font-bold text-arkadara-900 mb-6">Alur Kerja Profesional</p>
+      <div class="h-1 w-20 bg-arkadara-500 mx-auto"></div>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12">
+      <!-- Offline -->
+      <div class="bg-white p-10 rounded-3xl shadow-sm border border-arkadara-100">
+        <h3 class="text-2xl font-serif font-bold text-arkadara-600 mb-8 flex items-center">
+          <span class="w-8 h-8 bg-arkadara-600 text-white rounded-full flex items-center justify-center text-sm mr-3">A</span>
+          Offline (Ke Lokasi)
+        </h3>
+        <div class="space-y-8">
+          {offlineSteps.map((step) => (
+            <div class="flex gap-6">
+              <div class="flex-shrink-0 w-10 h-10 rounded-full border-2 border-arkadara-100 flex items-center justify-center font-bold text-arkadara-500">{step.step}</div>
+              <div class="space-y-1">
+                <h4 class="font-bold text-arkadara-900">{step.title}</h4>
+                <p class="text-sm text-arkadara-900/60 leading-relaxed">{step.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Online -->
+      <div class="bg-arkadara-900 p-10 rounded-3xl shadow-xl">
+        <h3 class="text-2xl font-serif font-bold text-arkadara-100 mb-8 flex items-center">
+          <span class="w-8 h-8 bg-arkadara-100 text-arkadara-900 rounded-full flex items-center justify-center text-sm mr-3">B</span>
+          Online (Jarak Jauh)
+        </h3>
+        <div class="space-y-8">
+          {onlineSteps.map((step) => (
+            <div class="flex gap-6">
+              <div class="flex-shrink-0 w-10 h-10 rounded-full border-2 border-arkadara-100/20 flex items-center justify-center font-bold text-arkadara-100">{step.step}</div>
+              <div class="space-y-1">
+                <h4 class="font-bold text-white">{step.title}</h4>
+                <p class="text-sm text-white/60 leading-relaxed">{step.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div class="mt-10 p-4 bg-white/10 rounded-xl border border-white/10">
+          <p class="text-xs text-white/80 italic">
+            *Untuk pesanan online, konsultasikan cara pengukuran via WhatsApp agar hasil presisi.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
