@@ -1,57 +1,110 @@
 ---
 ---
+
 <section id="gallery" class="py-24 bg-arkadara-50 overflow-hidden">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <h2 class="text-sm font-bold tracking-widest text-arkadara-500 uppercase mb-3">Galeri Karya</h2>
-      <p class="text-3xl sm:text-4xl font-serif font-bold text-arkadara-900 mb-6">Hasil Jahitan Terbaik Kami</p>
+      <h2
+        class="text-sm font-bold tracking-widest text-arkadara-500 uppercase mb-3"
+      >
+        Galeri Karya
+      </h2>
+      <p
+        class="text-3xl sm:text-4xl font-serif font-bold text-arkadara-900 mb-6"
+      >
+        Hasil Jahitan Terbaik Kami
+      </p>
       <div class="h-1 w-20 bg-arkadara-500 mx-auto"></div>
     </div>
 
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <!-- Gallery Items with creative staggered layout -->
-      <div class="space-y-4">
-        <div class="aspect-[3/4] bg-arkadara-100 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-500 border-4 border-white shadow-md">
-          <div class="w-full h-full bg-gradient-to-br from-arkadara-500/20 to-arkadara-900/20 flex items-center justify-center italic text-arkadara-900/40">Kebaya</div>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+      <!-- Large Featured Image -->
+      <div
+        class="md:col-span-7 group relative aspect-[4/5] md:aspect-auto md:h-[600px] bg-arkadara-100 rounded-3xl overflow-hidden shadow-lg opacity-0 animate-[fade-in-up_0.8s_ease-out_forwards] [animation-timeline:view()] [animation-range:entry_10%_cover_30%]"
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-arkadara-900/80 via-arkadara-900/20 to-transparent flex flex-col justify-end p-8 md:p-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"
+        >
+          <h3
+            class="text-3xl font-serif text-white mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-500"
+          >
+            Signature Kebaya
+          </h3>
+          <p
+            class="text-white/80 font-light translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75"
+          >
+            Detail payet premium untuk momen istimewa.
+          </p>
         </div>
-        <div class="aspect-square bg-arkadara-100 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-500 border-4 border-white shadow-md">
-           <div class="w-full h-full bg-gradient-to-br from-arkadara-600/20 to-arkadara-900/20 flex items-center justify-center italic text-arkadara-900/40">Detail</div>
-        </div>
-      </div>
-      
-      <div class="space-y-4 md:mt-12">
-        <div class="aspect-square bg-arkadara-100 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-500 border-4 border-white shadow-md">
-           <div class="w-full h-full bg-gradient-to-br from-arkadara-500/20 to-arkadara-900/20 flex items-center justify-center italic text-arkadara-900/40">Dress</div>
-        </div>
-        <div class="aspect-[3/4] bg-arkadara-100 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-500 border-4 border-white shadow-md">
-           <div class="w-full h-full bg-gradient-to-br from-arkadara-600/20 to-arkadara-900/20 flex items-center justify-center italic text-arkadara-900/40">Fitting</div>
+        <div
+          class="w-full h-full bg-gradient-to-br from-arkadara-500/20 to-arkadara-900/20 flex items-center justify-center group-hover:scale-105 transition-transform duration-700"
+        >
+          <span class="italic text-arkadara-900/40 text-xl font-serif"
+            >Featured</span
+          >
         </div>
       </div>
 
-      <div class="space-y-4">
-        <div class="aspect-[3/4] bg-arkadara-100 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-500 border-4 border-white shadow-md">
-           <div class="w-full h-full bg-gradient-to-br from-arkadara-500/20 to-arkadara-900/20 flex items-center justify-center italic text-arkadara-900/40">Pesta</div>
+      <!-- Right Column Stack -->
+      <div class="md:col-span-5 flex flex-col gap-6">
+        <div
+          class="group relative aspect-square bg-arkadara-100 rounded-3xl overflow-hidden shadow-lg opacity-0 animate-[fade-in-up_0.8s_ease-out_forwards] [animation-timeline:view()] [animation-range:entry_10%_cover_30%] [animation-delay:150ms]"
+        >
+          <div
+            class="absolute inset-0 bg-arkadara-900/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"
+          >
+            <span
+              class="text-white font-medium tracking-widest uppercase border border-white/30 px-6 py-2 rounded-full scale-90 group-hover:scale-100 transition-transform duration-500"
+              >Detail Fitting</span
+            >
+          </div>
+          <div
+            class="w-full h-full bg-gradient-to-br from-arkadara-600/20 to-arkadara-900/20 group-hover:scale-105 transition-transform duration-700"
+          >
+          </div>
         </div>
-        <div class="aspect-square bg-arkadara-100 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-500 border-4 border-white shadow-md">
-           <div class="w-full h-full bg-gradient-to-br from-arkadara-600/20 to-arkadara-900/20 flex items-center justify-center italic text-arkadara-900/40">Bahan</div>
-        </div>
-      </div>
 
-      <div class="space-y-4 md:mt-12">
-        <div class="aspect-square bg-arkadara-100 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-500 border-4 border-white shadow-md">
-           <div class="w-full h-full bg-gradient-to-br from-arkadara-500/20 to-arkadara-900/20 flex items-center justify-center italic text-arkadara-900/40">Sarimbit</div>
-        </div>
-        <div class="aspect-[3/4] bg-arkadara-100 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-500 border-4 border-white shadow-md">
-           <div class="w-full h-full bg-gradient-to-br from-arkadara-600/20 to-arkadara-900/20 flex items-center justify-center italic text-arkadara-900/40">Wisuda</div>
+        <div
+          class="group relative aspect-[4/3] bg-arkadara-100 rounded-3xl overflow-hidden shadow-lg opacity-0 animate-[fade-in-up_0.8s_ease-out_forwards] [animation-timeline:view()] [animation-range:entry_10%_cover_30%] [animation-delay:300ms]"
+        >
+          <div
+            class="absolute inset-0 bg-arkadara-900/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"
+          >
+            <span
+              class="text-white font-medium tracking-widest uppercase border border-white/30 px-6 py-2 rounded-full scale-90 group-hover:scale-100 transition-transform duration-500"
+              >Dress Pesta</span
+            >
+          </div>
+          <div
+            class="w-full h-full bg-gradient-to-br from-arkadara-500/20 to-arkadara-900/20 group-hover:scale-105 transition-transform duration-700"
+          >
+          </div>
         </div>
       </div>
     </div>
-    
     <div class="mt-16 text-center">
-      <p class="text-arkadara-900/70 mb-6">Lihat koleksi lengkap kami di Instagram</p>
-      <a href="https://instagram.com/rumahjahit_arkadara" target="_blank" class="inline-flex items-center space-x-2 text-arkadara-600 font-bold hover:underline">
-        <span>@rumahjahit_arkadara</span>
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+      <p class="text-arkadara-900/70 mb-6">
+        Lihat koleksi lengkap kami di Instagram
+      </p>
+      <a
+        href="https://instagram.com/rumahjahitarkadara"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center space-x-2 text-arkadara-600 font-bold hover:underline"
+      >
+        <span>@rumahjahitarkadara</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          ><path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
       </a>
     </div>
   </div>

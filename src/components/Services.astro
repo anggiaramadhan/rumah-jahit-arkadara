@@ -10,27 +10,36 @@ const services = [
     description: 'Sarimbit atau seragam pesta untuk seluruh anggota keluarga dengan desain serasi.',
     icon: '🧵',
   },
-  {
-    title: 'Jahit Harian & Permak',
-    description: 'Layanan jahit untuk busana sehari-hari maupun perbaikan agar pas di badan.',
-    icon: '🪡',
-  },
 ];
 ---
 <section id="services" class="py-24 bg-white relative overflow-hidden">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center max-w-3xl mx-auto mb-16">
+    <div class="text-center max-w-3xl mx-auto mb-16 opacity-0 animate-[fade-in-up_0.8s_ease-out_forwards] [animation-timeline:view()] [animation-range:entry_10%_cover_30%]">
       <h2 class="text-sm font-bold tracking-widest text-arkadara-500 uppercase mb-3">Layanan Kami</h2>
       <p class="text-3xl sm:text-4xl font-serif font-bold text-arkadara-900 mb-6">Expertise dalam Seni Menjahit</p>
       <div class="h-1 w-20 bg-arkadara-500 mx-auto"></div>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-8">
-      {services.map((service) => (
-        <div class="group p-8 rounded-2xl bg-arkadara-50 border border-arkadara-100 hover:border-arkadara-500 transition-all duration-300 hover:shadow-xl">
-          <div class="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
-          <h3 class="text-xl font-serif font-bold text-arkadara-900 mb-4">{service.title}</h3>
-          <p class="text-arkadara-900/70 leading-relaxed font-light">{service.description}</p>
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      {services.map((service, index) => (
+        <div 
+          class="group relative p-10 rounded-2xl bg-white border border-arkadara-100 hover:border-transparent transition-all duration-500 hover:shadow-[0_20px_40px_-15px_rgba(176,137,104,0.3)] hover:-translate-y-2 overflow-hidden opacity-0 animate-[fade-in-up_0.8s_ease-out_forwards] [animation-timeline:view()] [animation-range:entry_10%_cover_30%]"
+          style={`animation-delay: ${index * 150}ms`}
+        >
+          <!-- Hover decorative background -->
+          <div class="absolute inset-0 bg-gradient-to-br from-arkadara-50/50 to-arkadara-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+          
+          <div class="w-16 h-16 rounded-full bg-arkadara-50 flex items-center justify-center text-3xl mb-8 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 border border-arkadara-100 group-hover:border-arkadara-500/30">
+            {service.icon}
+          </div>
+          <h3 class="text-xl font-serif font-bold text-arkadara-900 mb-4 group-hover:text-arkadara-600 transition-colors duration-300">{service.title}</h3>
+          <p class="text-arkadara-900/60 leading-relaxed font-light">{service.description}</p>
+          
+          <!-- Subtle explore line -->
+          <div class="mt-8 flex items-center space-x-2 text-arkadara-500 text-sm font-bold tracking-widest uppercase opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 delay-100">
+            <span>Eksplor</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </div>
         </div>
       ))}
     </div>

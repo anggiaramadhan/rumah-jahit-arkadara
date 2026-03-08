@@ -1,0 +1,54 @@
+---
+const testimonials = [
+  {
+    quote: "Jahitannya sangat rapi dan pas di badan. Pelayanannya ramah, sangat puas dengan hasil kebaya wisuda saya!",
+    author: "Amelie K.",
+    role: "Mahasiswi",
+  },
+  {
+    quote: "Sudah langganan di Arkadara untuk seragam keluarga. Selalu tepat waktu dan modelnya selalu up to date.",
+    author: "Ibu Sarah",
+    role: "Klien Keluarga",
+  },
+  {
+    quote: "Bahan dan detail payet untuk dress lamaran saya dikerjakan luar biasa teliti. Sangat direkomendasikan.",
+    author: "Rina S.",
+    role: "Klien Wedding",
+  }
+];
+---
+<section id="testimonials" class="py-24 bg-arkadara-900 text-white relative overflow-hidden">
+  <div class="absolute top-0 right-0 w-96 h-96 bg-arkadara-600/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-arkadara-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="text-center max-w-3xl mx-auto mb-20 opacity-0 animate-[fade-in-up_0.8s_ease-out_forwards] [animation-timeline:view()] [animation-range:entry_10%_cover_30%]">
+      <h2 class="text-sm font-bold tracking-widest text-arkadara-500 uppercase mb-3">Kata Mereka</h2>
+      <p class="text-4xl sm:text-5xl font-serif font-light mb-6">Cerita Pelanggan Arkadara</p>
+      <div class="h-[1px] w-24 bg-arkadara-500 mx-auto"></div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-10">
+      {testimonials.map((t, index) => (
+        <div 
+          class="bg-white/5 backdrop-blur-sm p-10 rounded-2xl border border-white/10 hover:border-arkadara-500/50 transition-colors duration-500 flex flex-col justify-between opacity-0 animate-[fade-in-up_0.8s_ease-out_forwards] [animation-timeline:view()] [animation-range:entry_10%_cover_30%]"
+          style={`animation-delay: ${index * 150}ms`}
+        >
+          <div>
+            <div class="text-arkadara-500 mb-6">
+              <svg class="w-10 h-10 opacity-50" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" /></svg>
+            </div>
+            <p class="text-lg leading-relaxed font-light mb-8 italic text-white/90">"{t.quote}"</p>
+          </div>
+          <div class="flex items-center space-x-4">
+             <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-arkadara-500 to-arkadara-600 flex items-center justify-center text-xl font-serif">{t.author.charAt(0)}</div>
+             <div>
+                <p class="font-bold text-arkadara-100">{t.author}</p>
+                <p class="text-sm text-arkadara-500 uppercase tracking-widest">{t.role}</p>
+             </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

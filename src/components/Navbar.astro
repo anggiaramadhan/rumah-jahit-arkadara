@@ -1,51 +1,100 @@
 ---
 const navLinks = [
-  { href: '#hero', label: 'Beranda' },
-  { href: '#services', label: 'Layanan' },
-  { href: '#process', label: 'Cara Pesan' },
-  { href: '#location', label: 'Lokasi' },
+  { href: "#hero", label: "Beranda" },
+  { href: "#services", label: "Layanan" },
+  { href: "#process", label: "Cara Pesan" },
+  { href: "#location", label: "Lokasi" },
 ];
 ---
 
-<nav class="fixed w-full z-50 bg-arkadara-50/80 backdrop-blur-md border-b border-arkadara-100">
+<nav
+  class="fixed w-full z-50 bg-arkadara-50/80 backdrop-blur-md border-b border-arkadara-100"
+>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-20">
       <!-- Logo -->
       <div class="flex-shrink-0 flex items-center">
         <a href="/" class="flex items-center space-x-2">
-          <span class="text-2xl font-serif font-bold tracking-tight text-arkadara-600">Arkadara</span>
+          <span
+            class="text-2xl font-serif font-bold tracking-tight text-arkadara-600"
+            >Arkadara</span
+          >
         </a>
       </div>
 
       <!-- Desktop Links -->
       <div class="hidden md:flex items-center space-x-8">
-        {navLinks.map((link) => (
-          <a
-            href={link.href}
-            class="text-sm font-medium text-arkadara-900/70 hover:text-arkadara-600 transition-colors"
-          >
-            {link.label}
-          </a>
-        ))}
+        {
+          navLinks.map((link) => (
+            <a
+              href={link.href}
+              class="text-sm font-medium text-arkadara-900/70 hover:text-arkadara-600 transition-colors"
+            >
+              {link.label}
+            </a>
+          ))
+        }
         <a
-          href="https://instagram.com/rumahjahit_arkadara"
+          href="https://instagram.com/rumahjahitarkadara"
           target="_blank"
           rel="noopener noreferrer"
           class="flex items-center space-x-1 text-arkadara-600 hover:text-arkadara-500 transition-colors"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-5 h-5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path
+              d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line
+              x1="17.5"
+              x2="17.51"
+              y1="6.5"
+              y2="6.5"></line>
+          </svg>
           <span class="text-sm font-medium">Instagram</span>
         </a>
       </div>
 
       <!-- Mobile Menu Button -->
       <div class="md:hidden flex items-center">
-        <button id="mobile-menu-button" type="button" class="text-arkadara-900 p-2" aria-label="Toggle menu">
-          <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        <button
+          id="mobile-menu-button"
+          type="button"
+          class="text-arkadara-900 p-2"
+          aria-label="Toggle menu"
+        >
+          <svg
+            id="menu-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
-          <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          <svg
+            id="close-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 hidden"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"></path>
           </svg>
         </button>
       </div>
@@ -53,23 +102,43 @@ const navLinks = [
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden md:hidden bg-arkadara-50 border-b border-arkadara-100 overflow-hidden transition-all duration-300 ease-in-out">
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden bg-arkadara-50 border-b border-arkadara-100 overflow-hidden transition-all duration-300 ease-in-out"
+  >
     <div class="px-4 pt-2 pb-6 space-y-2">
-      {navLinks.map((link) => (
-        <a
-          href={link.href}
-          class="block px-3 py-2 text-base font-medium text-arkadara-900 hover:text-arkadara-600 hover:bg-arkadara-100 rounded-lg transition-colors mobile-link"
-        >
-          {link.label}
-        </a>
-      ))}
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="block px-3 py-2 text-base font-medium text-arkadara-900 hover:text-arkadara-600 hover:bg-arkadara-100 rounded-lg transition-colors mobile-link"
+          >
+            {link.label}
+          </a>
+        ))
+      }
       <a
-        href="https://instagram.com/rumahjahit_arkadara"
+        href="https://instagram.com/rumahjahitarkadara"
         target="_blank"
         rel="noopener noreferrer"
         class="flex items-center space-x-2 px-3 py-2 text-base font-medium text-arkadara-600 hover:bg-arkadara-100 rounded-lg transition-colors"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path
+            d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line
+            x1="17.5"
+            x2="17.51"
+            y1="6.5"
+            y2="6.5"></line>
+        </svg>
         <span>Instagram</span>
       </a>
     </div>
@@ -77,39 +146,41 @@ const navLinks = [
 </nav>
 
 <script>
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const menuIcon = document.getElementById('menu-icon');
-  const closeIcon = document.getElementById('close-icon');
-  const mobileLinks = document.querySelectorAll('.mobile-link');
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const menuIcon = document.getElementById("menu-icon");
+  const closeIcon = document.getElementById("close-icon");
+  const mobileLinks = document.querySelectorAll(".mobile-link");
 
   function toggleMenu() {
-    mobileMenu?.classList.toggle('hidden');
-    menuIcon?.classList.toggle('hidden');
-    closeIcon?.classList.toggle('hidden');
-    
+    mobileMenu?.classList.toggle("hidden");
+    menuIcon?.classList.toggle("hidden");
+    closeIcon?.classList.toggle("hidden");
+
     // Accessibility
-    const isExpanded = mobileMenu?.classList.contains('hidden') ? 'false' : 'true';
-    mobileMenuButton?.setAttribute('aria-expanded', isExpanded);
+    const isExpanded = mobileMenu?.classList.contains("hidden")
+      ? "false"
+      : "true";
+    mobileMenuButton?.setAttribute("aria-expanded", isExpanded);
   }
 
-  mobileMenuButton?.addEventListener('click', toggleMenu);
+  mobileMenuButton?.addEventListener("click", toggleMenu);
 
   // Close menu when a link is clicked
-  mobileLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu?.classList.add('hidden');
-      menuIcon?.classList.remove('hidden');
-      closeIcon?.classList.add('hidden');
+  mobileLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu?.classList.add("hidden");
+      menuIcon?.classList.remove("hidden");
+      closeIcon?.classList.add("hidden");
     });
   });
 
   // Close menu on resize if above mobile breakpoint
-  window.addEventListener('resize', () => {
+  window.addEventListener("resize", () => {
     if (window.innerWidth >= 768) {
-      mobileMenu?.classList.add('hidden');
-      menuIcon?.classList.remove('hidden');
-      closeIcon?.classList.add('hidden');
+      mobileMenu?.classList.add("hidden");
+      menuIcon?.classList.remove("hidden");
+      closeIcon?.classList.add("hidden");
     }
   });
 </script>
