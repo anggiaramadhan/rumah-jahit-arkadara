@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  --color-arkadara-50: #fdf8f6;
-  --color-arkadara-100: #f2e8e5;
-  --color-arkadara-500: #b08968;
-  --color-arkadara-600: #7f5539;
-  --color-arkadara-900: #3c2a20;
+  --color-arkadara-50: #fbfbf9;
+  --color-arkadara-100: #eeebd6;
+  --color-arkadara-500: #7d7732;
+  --color-arkadara-600: #645f26;
+  --color-arkadara-900: #312f16;
 
   --font-serif: "Playfair Display", serif;
   --font-sans: "Lato", sans-serif;

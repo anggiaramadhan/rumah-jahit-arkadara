@@ -1,0 +1,84 @@
+---
+const prices = [
+    { item: "Jahit Rok", price: "Rp 100.000" },
+    { item: "Jahit Celana", price: "Rp 150.000" },
+    { item: "Jahit Atasan", price: "Rp 150.000" },
+    { item: "Jahit Kebaya", price: "Rp 200.000" },
+    { item: "Jahit Dress", price: "Rp 150.000" },
+    { item: "Jahit Rok Anak", price: "Rp 75.000" },
+    { item: "Jahit Celana Anak", price: "Rp 100.000" },
+    { item: "Jahit Baju Anak", price: "Rp 100.000" },
+];
+---
+
+<section id="pricelist" class="py-24 bg-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+            class="text-center max-w-3xl mx-auto mb-16 opacity-0 animate-[fade-in-up_0.8s_ease-out_forwards] [animation-timeline:view()] [animation-range:entry_10%_cover_30%]"
+        >
+            <h2
+                class="text-sm font-bold tracking-widest text-arkadara-500 uppercase mb-3"
+            >
+                Estimasi Harga
+            </h2>
+            <p
+                class="text-3xl sm:text-4xl font-serif font-bold text-arkadara-900 mb-6"
+            >
+                Daftar Harga Layanan Jahit
+            </p>
+            <div class="h-1 w-20 bg-arkadara-500 mx-auto"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-x-12 gap-y-4">
+                {
+                    prices.map((item, index) => (
+                        <div
+                            class="flex items-center justify-between p-4 border-b border-arkadara-100 opacity-0 animate-[fade-in-up_0.8s_ease-out_forwards] [animation-timeline:view()] [animation-range:entry_10%_cover_30%]"
+                            style={`animation-delay: ${index * 50}ms`}
+                        >
+                            <span class="text-lg font-serif text-arkadara-900">
+                                {item.item}
+                            </span>
+                            <div class="flex items-center space-x-2">
+                                <span class="text-xs text-arkadara-900/50 uppercase tracking-wider">
+                                    Mulai dari
+                                </span>
+                                <span class="text-lg font-bold text-arkadara-600">
+                                    {item.price}
+                                </span>
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+
+            <div
+                class="mt-12 text-center opacity-0 animate-[fade-in-up_0.8s_ease-out_forwards] [animation-timeline:view()] [animation-range:entry_10%_cover_30%]"
+            >
+                <p
+                    class="inline-flex items-center justify-center space-x-2 px-6 py-3 bg-arkadara-50 rounded-full text-sm text-arkadara-900/70 border border-arkadara-100"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-5 h-5 text-arkadara-500"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                    </svg>
+                    <span class="italic"
+                        >*Catatan: Harga pasti akan menyesuaikan dengan tingkat
+                        kerumitan model dan detail pesanan Anda.</span
+                    >
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
