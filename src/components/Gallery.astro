@@ -1,4 +1,9 @@
 ---
+const galleryImages = {
+  featured: "/gallery/baju-1.jpg",
+  detail: "/gallery/baju-2.jpg",
+  dress: "/gallery/baju-3.jpg",
+};
 ---
 
 <section id="gallery" class="py-24 bg-arkadara-50 overflow-hidden">
@@ -36,13 +41,12 @@
             Detail payet premium untuk momen istimewa.
           </p>
         </div>
-        <div
-          class="w-full h-full bg-gradient-to-br from-arkadara-500/20 to-arkadara-900/20 flex items-center justify-center group-hover:scale-105 transition-transform duration-700"
-        >
-          <span class="italic text-arkadara-900/40 text-xl font-serif"
-            >Featured</span
-          >
-        </div>
+        <img
+          src={galleryImages.featured}
+          alt="Signature Kebaya"
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+          loading="lazy"
+        />
       </div>
 
       <!-- Right Column Stack -->
@@ -58,10 +62,12 @@
               >Detail Fitting</span
             >
           </div>
-          <div
-            class="w-full h-full bg-gradient-to-br from-arkadara-600/20 to-arkadara-900/20 group-hover:scale-105 transition-transform duration-700"
-          >
-          </div>
+          <img
+            src={galleryImages.detail}
+            alt="Detail Fitting"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            loading="lazy"
+          />
         </div>
 
         <div
@@ -75,10 +81,12 @@
               >Dress Pesta</span
             >
           </div>
-          <div
-            class="w-full h-full bg-gradient-to-br from-arkadara-500/20 to-arkadara-900/20 group-hover:scale-105 transition-transform duration-700"
-          >
-          </div>
+          <img
+            src={galleryImages.dress}
+            alt="Dress Pesta"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            loading="lazy"
+          />
         </div>
       </div>
     </div>
