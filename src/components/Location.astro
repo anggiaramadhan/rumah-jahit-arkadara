@@ -1,4 +1,10 @@
 ---
+const locationName = "Rumah Jahit Arkadara";
+const locationAddress =
+  "Jl. Lkr. Selatan Jl. Golden Park II No.8B Blok H, Suradita, Kec. Cisauk, Kabupaten Tangerang, Banten 15343";
+const googleMapsUrl =
+  "https://www.google.com/maps/place/Rumah+Jahit+Arkadara,+Jl.+Lkr.+Selatan+Jl.+Golden+Park+II+No.8B+Blok+H,+Suradita,+Kec.+Cisauk,+Kabupaten+Tangerang,+Banten+15343/data=!4m2!3m1!1s0x2e69e5f8d7fcd421:0xa58cb9166e8e2bee!18m1!1e1";
+const embedAddress = encodeURIComponent(`${locationName}, ${locationAddress}`);
 ---
 <section id="location" class="py-24 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -6,7 +12,7 @@
       <div class="space-y-8">
         <div>
           <h2 class="text-sm font-bold tracking-widest text-arkadara-500 uppercase mb-3">Lokasi Kami</h2>
-          <p class="text-3xl sm:text-4xl font-serif font-bold text-arkadara-900">Kunjungi Butik Arkadara di Cisauk</p>
+          <p class="text-3xl sm:text-4xl font-serif font-bold text-arkadara-900">Kunjungi {locationName} di Cisauk</p>
         </div>
         
         <div class="space-y-6">
@@ -16,7 +22,7 @@
             </div>
             <div>
               <h4 class="font-bold text-arkadara-900 mb-1">Alamat</h4>
-              <p class="text-arkadara-900/60">Cisauk, Kec. Cisauk, Kabupaten Tangerang, Banten</p>
+              <p class="text-arkadara-900/60">{locationAddress}</p>
             </div>
           </div>
 
@@ -32,15 +38,15 @@
           </div>
         </div>
 
-        <a href="https://maps.google.com/?q=Cisauk+Tangerang" target="_blank" class="inline-flex items-center px-6 py-3 border-2 border-arkadara-600 text-arkadara-600 font-bold rounded-full hover:bg-arkadara-600 hover:text-white transition-all">
+        <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 border-2 border-arkadara-600 text-arkadara-600 font-bold rounded-full hover:bg-arkadara-600 hover:text-white transition-all">
           Buka di Google Maps
         </a>
       </div>
 
       <div class="rounded-3xl overflow-hidden shadow-2xl h-[400px] border-8 border-arkadara-50 ring-1 ring-arkadara-100">
-        <!-- Google Maps Embed Placeholder (Cisauk Area) -->
+        <!-- Google Maps Embed -->
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15862.668541995804!2d106.6343516!3d-6.3204558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fb208fa1a8f9%3A0x643c162cf08d3e23!2sCisauk%2C%20Tangerang%20Regency%2C%20Banten!5e0!3m2!1sen!2sid!4v1709770000000!5m2!1sen!2sid" 
+          src={`https://maps.google.com/maps?q=${embedAddress}&t=&z=17&ie=UTF8&iwloc=B&output=embed`}
           width="100%" 
           height="100%" 
           style="border:0;" 
